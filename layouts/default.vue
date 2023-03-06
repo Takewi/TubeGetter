@@ -1,6 +1,6 @@
 <template>
   <v-app dark>
-    <v-navigation-drawer v-model="drawer" :mini-variant="false" fixed app>
+    <v-navigation-drawer v-model="drawer" :mini-variant="false" fixed app flat outlined>
       <v-list>
         <v-list-item
           v-for="(item, index) in items"
@@ -18,7 +18,7 @@
         </v-list-item>
       </v-list>
     </v-navigation-drawer>
-    <v-app-bar fixed app>
+    <v-app-bar fixed app flat outlined>
       <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
       <v-toolbar-title>{{ title }}</v-toolbar-title>
       <v-spacer />
@@ -28,7 +28,7 @@
         <Nuxt />
       </v-container>
     </v-main>
-    <v-footer absolute app>
+    <v-footer absolute app flat outlined>
       <span>&copy; {{ new Date().getFullYear() }}</span>
     </v-footer>
   </v-app>
